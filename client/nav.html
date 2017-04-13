@@ -1,0 +1,22 @@
+<template name = "nav">
+	<ul class="topnav" id="myTopnav">
+		<li><a href="{{pathFor route = 'home'}}">
+		<span class="glyphicon glyphicon-home"></span>
+		</a></li>
+	  <li><a href="{{pathFor route = 'contact'}}">Contact</a></li>
+	  <li><a href="{{pathFor route = 'testing'}}">Testing</a></li>
+	  <li><a href="{{pathFor route = 'marketing'}}">Marketing</a></li>
+	  {{#if currentUser}}
+	  <li><a href="#" class = "logout">Logout</a></li>
+	  <li><a href="{{pathFor route = 'administration2'}}">Current Admin</a></li>
+	  {{else}}
+	  <li><a href="{{pathFor route = 'administration1'}}">Admin</a></li>
+	  <li><a href="{{pathFor route = 'user'}}">User</a></li>
+	  {{/if}}
+	  <li class="icon">
+		<a href="javascript:void(0);">&#9776;</a>
+	  </li>
+	<img src="http://imagizer.imageshack.us/v2/320x240q90/921/s6RIfC.png"  id="mainlogo" class="img-responsive" alt="Bridged" width="105" height="55">
+	</ul>
+
+</template>
